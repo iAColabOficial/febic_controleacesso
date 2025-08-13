@@ -1,0 +1,86 @@
+{
+    "name": "FEBIC 2025 - Controle de Acesso",
+    "short_name": "FEBIC Controle",
+    "description": "Sistema de controle de acesso para FEBIC 2025 com leitura QR",
+    "start_url": "/controleacesso/",
+    "display": "standalone",
+    "background_color": "#667eea",
+    "theme_color": "#667eea",
+    "orientation": "portrait-primary",
+    "scope": "/controleacesso/",
+    "lang": "pt-BR",
+    "categories": ["productivity", "utilities"],
+    "icons": [
+        {
+            "src": "assets/icons/android/android-launchericon-72-72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/android/android-launchericon-96-96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/ios/128.png",
+            "sizes": "128x128",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/android/android-launchericon-144-144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/ios/152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/android/android-launchericon-192-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/ios/256.png",
+            "sizes": "256x256",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "assets/icons/android/android-launchericon-512-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Mini-cursos",
+            "short_name": "Mini-cursos",
+            "description": "Acesso direto aos mini-cursos",
+            "url": "/controleacesso/controle.php?tipo=2",
+            "icons": [{ "src": "assets/icons/android/android-launchericon-96-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Oficinas",
+            "short_name": "Oficinas", 
+            "description": "Acesso direto às oficinas",
+            "url": "/controleacesso/controle.php?tipo=3",
+            "icons": [{ "src": "assets/icons/android/android-launchericon-96-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Admin",
+            "short_name": "Admin",
+            "description": "Área administrativa",
+            "url": "/controleacesso/admin/",
+            "icons": [{ "src": "assets/icons/android/android-launchericon-96-96.png", "sizes": "96x96" }]
+        }
+    ]
+}

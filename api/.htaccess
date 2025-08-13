@@ -1,0 +1,28 @@
+# Configurações de segurança para a API - VERSÃO MELHORADA
+RewriteEngine On
+
+# Permitir acesso às APIs específicas necessárias
+RewriteCond %{REQUEST_URI} !.*(verificar_participante|registrar_presenca|debug|teste_simples|debug_completo)\.php$ [NC]
+RewriteCond %{HTTP_X_REQUESTED_WITH} !XMLHttpRequest
+RewriteCond %{REQUEST_URI} !.*\.(css|js|png|jpg|gif|ico)$ [NC]
+RewriteRule ^(.*)$ ../index.php [R=302,L]
+
+# Configurações de cabeçalhos de segurança
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Configurações PHP
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_value max_execution_time 300
+
+# Bloquear acesso a arquivos sensíveis
+<Files "*.backup">
+    Deny from all
+</Files>

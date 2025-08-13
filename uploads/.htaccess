@@ -1,0 +1,8 @@
+# Negar acesso direto aos arquivos de upload
+Deny from all
+<Files "*.xlsx">
+    Allow from all
+</Files>
+<Files "*.xls">
+    Allow from all
+</Files>
